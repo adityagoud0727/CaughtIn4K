@@ -73,3 +73,56 @@ A working desktop application with media analysis, sanitization, PixelVault, rep
 
 ---
 Academic Year 2026–2027
+
+
+## Installation and Setup
+
+### Prerequisites
+- Windows 10 or Windows 11
+- Python installed
+- Git installed
+
+### Clone the Repository
+
+```powershell
+git clone https://github.com/YOUR_USERNAME/CaughtIn4K.git
+cd CaughtIn4K
+```
+
+Replace `YOUR_USERNAME` with your GitHub username.
+
+### Create a Virtual Environment
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, use the environment's Python directly in the next step.
+
+### Install Dependencies
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### Initialize and Create a User
+
+Initialize the database and create a local user using the project's helper script:
+
+```powershell
+python create_user.py
+```
+
+Enter the username and password when prompted.
+
+### Run CaughtIn4K
+
+```powershell
+python -m app.main
+```
+
+### Local Data and Privacy
+
+The application stores its database and generated reports locally. These files are excluded from version control by `.gitignore`. Keep sensitive media and generated reports private.
